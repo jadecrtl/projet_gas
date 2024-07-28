@@ -1,0 +1,19 @@
+1 A = -2
+2 IMPRIME A
+3 B = 2
+4 B = B * -1
+5 IMPRIME B
+10 C = -(2+3)
+11 IMPRIME C
+12 D = 1 + (-2)
+
+
+
+
+13 IMPRIME D
+15 E = 40 / 2 * 3
+16 IMPRIME E
+17 T = 1
+18 Y = T
+19 IMPRIME T
+20 IMPRIME Y

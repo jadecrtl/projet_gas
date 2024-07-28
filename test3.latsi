@@ -1,0 +1,12 @@
+5 REM "Ce programme est formidable."
+10 IMPRIME "Bonjour Paris"
+15 NL
+20 I = 0
+35 IMPRIME I, " ", "hello"
+37 I = I + 1
+38 IMPRIME I
+10 R = 7 
+40 L = 3
+42 SI L > 0 ALORS L = 2
+45 IMPRIME L, " ", "hi"
+46 IMPRIME R

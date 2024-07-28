@@ -1,0 +1,5 @@
+42 A = 1
+43 IMPRIME A
+45 FIN
+50 IMPRIME " toi "
+60 IMPRIME "tes pas sense etre la"

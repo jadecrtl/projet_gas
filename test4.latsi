@@ -1,0 +1,6 @@
+5 I = 3
+12 SI I <> 0 ALORS I = 2
+35 IMPRIME I, " " 
+5 N = 3
+12 SI N >< 0 ALORS N = 2
+35 IMPRIME N, " " 

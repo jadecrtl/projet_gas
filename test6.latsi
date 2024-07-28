@@ -1,0 +1,15 @@
+5 REM "Ce programme est formidable."
+10 IMPRIME "Bonjour Paris"
+15 NL
+20 I = 0
+35 IMPRIME I, " ", "hello"
+37 I = I + 1
+38 IMPRIME I
+39 VAVERS 50
+40 X = 2
+41 ENTREE A, B
+42 A = A + 1
+43 IMPRIME A, B
+45 FIN
+50 IMPRIME "goto"
+60 IMPRIME "ne s'imprime pas"

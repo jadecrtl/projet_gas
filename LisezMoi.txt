@@ -1,0 +1,74 @@
+# Bienvenu dans LisezMoi.txt
+
+Dans notre répertoire, nous avons deux archives : latsi_basique_RJ.tar et latsi_extension1_RJ.tar.
+
+L'archive latsi_basique_RJ.tar correspond aux étapes 1 à 4 de l'énoncé du projet. Pour la tester, il faut extraire son contenu dans un répertoire distinct en dehors de notre projet afin de ne pas écraser les fichiers actuels.
+
+L'archive latsi_extension1_RJ.tar contient une extension et doit être traitée de la même manière que l'archive précédente.
+
+Une fois cela terminé, vous pouvez passer aux étapes suivantes.
+
+# Instructions pour compiler et exécuter le programme
+
+## Compilation
+
+Pour compiler le programme, utilisez `dune` en exécutant la commande suivante dans le répertoire racine du projet :
+
+dune build
+
+Cette commande va compiler tous les fichiers nécessaires et générer l'exécutable.
+
+## Exécution
+
+Pour exécuter le programme, utilisez `dune` avec la commande `exec`. Par exemple, pour exécuter le programme avec un fichier de test, utilisez la commande suivante :
+
+dune exec ./main.exe "test_file"
+_build/default/main.exe "test_file"
+
+Remplacez "test_file" par le nom du fichier que vous souhaitez utiliser pour tester votre programme.
+Dans notre projet nous avons différent fichiers de test de test.latsi à test7.latsi.
+
+Ou bien vous pouvez tester juste avec ces 2 commandes pour faire des tests sur stdin :
+
+dune exec ./main.exe
+_build/default/main.exe
+
+## Nettoyage
+
+Si vous avez besoin de nettoyer le projet en supprimant les fichiers de compilation générés, utilisez la commande suivante :
+
+dune clean
+
+Cette commande supprimera tous les fichiers générés par la compilation, vous permettant de repartir d'une base propre. Cela peut être utile si vous souhaitez recompiler tout le projet à partir de zéro ou si vous rencontrez des problèmes de compilation.
+
+# Description des parties réalisées
+
+## Fonctionnalités implémentées
+
+1. **Lexer (lexer.mll) :**
+   - Analyse lexicale des différents tokens nécessaires pour le langage (chiffres, variables, opérateurs, etc.).
+   - Gestion des espaces, des chaînes de caractères et des commentaires.
+   - Règles pour reconnaître et retourner les différents types de tokens.
+
+2. **AST (ast.ml) :**
+   - Définition des types pour les opérateurs unaires et binaires, les expressions, les éléments d'expression, les listes de variables et d'expressions, les opérateurs de comparaison, les instructions, les lignes de programme, et les programmes.
+   - Fonctions de conversion des opérateurs, expressions, éléments d'expression, listes d'expressions, listes de variables, opérateurs relationnels, instructions, lignes et programmes en chaînes de caractères pour faciliter le débogage et l'affichage.
+
+3. **Parser (parser.mly) :**
+   - Déclaration des tokens avec leurs types.
+   - Définition des règles de la grammaire pour analyser les programmes, lignes, opérateurs relationnels, instructions, listes d'expressions, éléments de listes d'expressions, listes de variables, expressions, termes et facteurs.
+
+4. **Main (main.ml) :**
+   - Gestion des tables de symboles pour stocker et récupérer les valeurs des variables.
+   - Fonctions pour évaluer les expressions et les instructions, incluant les sauts conditionnels et inconditionnels, la lecture des entrées utilisateur, l'affectation de valeurs aux variables, l'impression des résultats, et la gestion des fins de programme.
+   - Filtrage des lignes du programme pour ne garder que la dernière occurrence de chaque numéro de ligne.
+   - Exécution du programme en suivant les lignes triées par numéro et en gérant les sauts.
+   - Lecture et analyse syntaxique du fichier d'entrée pour obtenir l'AST.
+
+## Organisation du travail en binôme
+
+Nous avons collaboré pour intégrer nos parties respectives et assurer le bon fonctionnement global du programme, en faisant des revues de code mutuelles et des tests réguliers pour vérifier l'intégration de nos travaux.
+
+Si vous avez des questions ou des problèmes, n'hésitez pas à nous contacter.
+
+Bonne utilisation !
